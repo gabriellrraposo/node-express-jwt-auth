@@ -12,7 +12,8 @@ app.use(express.json())
 app.set('view engine', 'ejs');
 
 // database connection
-const dbURI = 'mongodb+srv://user-auth:teste1234@cluster-jwt-auth.xpangzy.mongodb.net/?retryWrites=true&w=majority';
+// const dbURI = 'mongodb+srv://user-auth:teste1234@cluster-jwt-auth.xpangzy.mongodb.net/node-auth';
+const dbURI = 'mongodb+srv://user-auth:teste1234@cluster-jwt-auth.xpangzy.mongodb.net/node-auth';
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex:true })
   .then((result) => app.listen(3000))
   .catch((err) => console.log(err));
